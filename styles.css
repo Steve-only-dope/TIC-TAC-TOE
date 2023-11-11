@@ -1,60 +1,62 @@
 body {
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  /* background-color: #f0f0f0; */
-  background-image: url(img1.jpg);
-}
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffbe95;
+    }
 
-.game {
-  text-align: center;
-}
+    .game {
+      text-align: center;
+    }
 
-.scores {
-  margin-bottom: 20px;
-  font-size: 24px;
-  background-color: #ffb5aa;
-  border-radius: 5px;
-  font-weight: bold;
-}
+    .scores {
+      margin-bottom: 20px;
+      font-size: 24px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      font-weight: bold;
+      border: 2px solid #ff7455;
+      box-shadow: 5 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-.cell {
-  width: 100px;
-  height: 100px;
-  border: 2px solid #2c3e50;
-  display: inline-block;
-  font-size: 50px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  background-color: #ecf0f1;
-  color: #2c3e50;
-}
+    .grid {
+      width: 325px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      background-color: orange;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-.cell:hover {
-  background-color: #bdc3c7;
-  color: #fff;
-}
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ff7455;
+      font-size: 60px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      background-color: #ecf0f1;
+      color: purple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.grid {
-  width: 320px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
-  background-color: #34495e;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .cell:hover {
+      background-color: white;
+      color: #fff;
+    }
 
-#scoreX {
-  color: #3498db;
-}
+    /* Styles pour les emojis X et O */
+    .cell.x {
+      color: blue;
+    }
 
-#scoreO {
-  color: #e74c3c;
-}
+    .cell.o {
+      color: red;
+    }
